@@ -1,4 +1,4 @@
-![image](https://github.com/twojun/QueryDSL_Practice/assets/118627166/63769453-c606-49e9-b35e-07f62624904b)# Chapter 1. QueryDSL 프로젝트 환경 설정 </br>
+# Chapter 1. QueryDSL 프로젝트 환경 설정 </br>
 
 1-1. Spring Boot 3.x 이상</br>
 https://velog.io/@juhyeon1114/Spring-QueryDsl-gradle-%EC%84%A4%EC%A0%95-Spring-boot-3.0-%EC%9D%B4%EC%83%81</br></br>
