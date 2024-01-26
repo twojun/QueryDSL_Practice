@@ -176,3 +176,34 @@ member.username.startsWith("member") //like ‘member%’ 검색 ...</br></br>
 
 
 2-12. 조건 case식, CaseBuilder</br>
+(1) 조건식이 필요할 수도 있겠지만 데이터베이스는 순수하게 나열된 로우들을 순수히 넘기는 역할만 해야 한다.</br></br>
+
+(2) 로우들이 특정 조건에 맞게 변경되어야 한다면 이 부분은 비즈니스 로직이나 , 애플리케이션 레벨, 프레젠테이션 레벨에서 처리하도록 한다 </br></br></br></br>
+
+
+
+2-13. 상수, 문자 더하기</br>
+(1) 문자 더하기 : concat</br>
+(2) 문자가 아닌 다른 타입들은 stringVale() 메서드를 통해 문자로 변환할 수 있다.</br>
+(3) 해당 메서드는 Enum Type을 주로 처리할 때 많이 사용되는 방법이다. </br></br></br></br>
+
+
+
+
+
+
+# Chapter 3. QueryDSL Advanced </br>
+3-1. 프로젝션 결과 반환 : 정의와 특징</br>
+(1) 프로젝션이란 select 쿼리에 지정된 대상을 말한다. </br></br>
+
+(2) 프로젝션 대상이 하나인 경우 타입을 명확하게 지정할 수 있다.</br></br>
+
+(3) 프로젝션 대상이 둘 이상이면 tuple이나 DTO로 조회해야 한다.</br>
+- tuple은 여러 개의 데이터 타입을 조회하기 위해 querydsl이 구현한 데이터 타입 </br>
+- tuple은 최소한 Repository 영역에서만 사용한다. Service, Controller 계층까지 넘어가는 건 좋은 설계는 아니다. </br>
+- Repository 영역을 벗어난 곳이라면, DTO로 변환해서 반환하는 것이 권장된다. </br>
+- 구현 기술을 다른 계층에서 알게 되는 것은 좋은 설계가 아님. </br> </br> </br> </br>
+
+
+
+3-2. 프로젝션 결과 반환 : DTO(Data Transfer Object)로 조회  </br>
