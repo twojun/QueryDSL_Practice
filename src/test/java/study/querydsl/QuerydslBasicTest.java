@@ -705,6 +705,40 @@ public class QuerydslBasicTest {
         }
 
     }
+
+    @Test
+    public void bulk_Multiply_Query_Test() throws Exception {
+        long count = queryFactory
+                .update(member)
+                .set(member.age, member.age.multiply(10))
+                .where(member.age.eq(10))
+                .execute();
+
+        Assertions.assertThat(count).isEqualTo(1);
+    }
+
+    @Test
+    public void bulk_Delete_Query_Test() throws Exception {
+        long count = queryFactory
+                .delete(member)
+                .where(member.age.gt(10))
+                .execute();
+        Assertions.assertThat(count).isEqualTo(3);
+    }
+
+
+    /**
+     *
+     * sql function
+     */
+    @Test
+    public void sqlFunction_Query_Test() throws Exception {
+        // Given
+
+        // When
+
+        // Then
+    }
 }
 
 
