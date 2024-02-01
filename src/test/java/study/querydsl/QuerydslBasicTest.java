@@ -728,17 +728,8 @@ public class QuerydslBasicTest {
 
 
     /**
-     *
      * sql function
      */
-    @Test
-    public void sqlFunction_Query_Test() throws Exception {
-        // Given
-
-        // When
-
-        // Then
-    }
 }
 
 
