@@ -129,12 +129,26 @@ public class MemberJpaRepository {
                 .fetch();
     }
 
+    public List<Member> searchMember(MemberSearchCondition condition) {
+        return queryFactory
+                .select(member)
+                .from(member)
+                .leftJoin(member.team, team)
+                .where(
+                        usernameEq(condition.getUsername()),
+                        teamNameEq(condition.getTeamName()),
+                        ageGoe(condition.getAgeGoe()),
+                        ageLoe(condition.getAgeLoe())
+                )
+                .fetch();
+    }
+
     private BooleanExpression usernameEq(String username) {
-       return username.isEmpty() ? null : member.username.eq(username);
+        return StringUtils.hasText(username) ? member.username.eq(username) : null;
     }
 
     private BooleanExpression teamNameEq(String teamName) {
-        return teamName.isEmpty() ? null : team.name.eq(teamName);
+        return StringUtils.hasText(teamName) ? team.name.eq(teamName) : null;
     }
 
     private BooleanExpression ageGoe(Integer ageGoe) {
