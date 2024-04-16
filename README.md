@@ -1,5 +1,5 @@
 # Chapter 1. QueryDSL 프로젝트 환경 설정 </br>
-(1) 내용 추가 필요</br></br>
+(1) 내용 추가 필요, 스프링 부트 3.X.X 이상 </br></br>
 
 ## 1-1. Spring Boot 3.x 이상</br>
 https://velog.io/@juhyeon1114/Spring-QueryDsl-gradle-%EC%84%A4%EC%A0%95-Spring-boot-3.0-%EC%9D%B4%EC%83%81</br></br>
